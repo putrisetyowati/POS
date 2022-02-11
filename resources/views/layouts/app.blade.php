@@ -66,25 +66,25 @@
      
 
       <li class="nav-item {{ (request()->is('kasir*')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{route('kasir')}}">
+        <a class="nav-link" href="{{route('pemilik.kasir.index')}}">
           <i class="fas fa-fw fa-users"></i>
           <span>Data Kasir</span></a>
       </li>
 
       <li class="nav-item {{ (request()->is('barang*')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{route('barang')}}">
+        <a class="nav-link" href="{{route('pemilik.barang.index')}}">
           <i class="fas fa-fw fa-database"></i>
           <span>Barang</span></a>
       </li>
 
       <li class="nav-item {{ (request()->is('pembelian*')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{route('pembelian')}}">
+        <a class="nav-link" href="{{route('pemilik.pembelian.index')}}">
           <i class="fas fa-fw fa-shopping-basket"></i>
           <span>Pembelian</span></a>
       </li>
 
       <li class="nav-item {{ (request()->is('transaksi*')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{route('transaksi')}}">
+        <a class="nav-link" href="{{route('pemilik.transaksi.index')}}">
           <i class="fas fa-fw fa-briefcase"></i>
           <span>Transaksi</span></a>
       </li>
@@ -95,13 +95,13 @@
 
 
       <li class="nav-item {{ (request()->is('laporan*')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{route('laporan')}}">
+        <a class="nav-link" href="{{route('pemilik.laporan.index')}}">
           <i class="fas fa-fw fa-book  "></i>
-          <span>Laporan</span></a>
+          <span>Riwayat Transaksi</span></a>
       </li>
 
       <li class="nav-item {{ (request()->is('ROP*')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{route('ROP')}}">
+        <a class="nav-link" href="{{route('pemilik.ROP.index')}}">
           <i class="fas fa-chart-area"></i>
           <span>ROP</span></a>
       </li>

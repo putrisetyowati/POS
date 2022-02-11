@@ -1,12 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BarangController;
-use App\Http\Controllers\KasirController;
-use App\Http\Controllers\PembelianController;
-use App\Http\Controllers\TransaksiController;
-use App\Http\Controllers\LaporanController;
-use App\Http\Controllers\RopController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,14 +18,22 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-Route::get('/barang', [BarangController::class, 'index'])->name('barang');
 
-Route::get('/kasir', [KasirController::class, 'index'])->name('kasir');
+Route::group([
+    'prefix' => 'pemilik',
+    'namespace' => 'Pemilik',
+    'as' => 'pemilik.'
+], function () {
+    // Route::group(['middleware' => ['auth', 'role:pemilik']], function () {
+        Route::resource('kasir', KasirController::class);
+        Route::resource('transaksi', TransaksiController::class);
+        Route::resource('barang', BarangController::class);
+        Route::resource('ROP', ROPController::class);
+        Route::resource('pembelian', PembelianController::class);
+        Route::resource('laporan', LaporanController::class);
+    // });
 
-Route::get('/pembelian', [PembelianController::class, 'index'])->name('pembelian');
+});
 
-Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
 
-Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
 
-Route::get('/ROP', [RopController::class, 'index'])->name('ROP');

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<title>Transaksi | POS</title>
+<title>Perhitungan ROP | POS</title>
 <style>
 .table {
   border-collapse: collapse;
@@ -78,7 +78,7 @@ tr:hover {background-color:#f5f5f5;}
                         <th class="td">Nama Barang</th>
                         <th class="td">Lead Time</th>
                         <th class="td">Rata rata Penjualan</th>
-                        <th class="td">Savety Stock</th>
+                        <th class="td">Safety Stock</th>
                         <th class="td">Hasil</th>
                         <th class="td"></th>
                     </tr>
